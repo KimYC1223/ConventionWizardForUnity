@@ -1,0 +1,31 @@
+Convention Wizard For Unity Installer [Windows]
+컨벤션 위자드 for Unity 인스톨러 [Windows]
+
+2024.04.24 @ KimYC1223
+
+-------------------------------------------------
+
+Unity 클라이언트 개발자용 코드 컨벤션 유지를 위한 환경설정 도우미입니다.
+
+PC를 포멧하거나, 팀에서 사용시 신규 입사자가 있을 때 사용해주시길 바랍니다.
+
+현재는 Windows Visual Studio만 지원하고 있습니다. (VS 2019, VS 2022)
+
+사용한 VS 확장은 다음과 같습니다.
+
+* CodeMaid
+https://www.codemaid.net/
+
+* StyleCop
+https://github.com/StyleCop/StyleCop
+
+* Editor GuideLines
+https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
+
+자세한 사용방법은 아래 github를 참고하세요.
+
+https://github.com/KimYC1223/ConventionWizardForUnity
+
+문의는 kau_esc@naver.com으로 부탁드립니다.
+
+감사합니다.

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Class Base [Convention Wizard]</Title>
+            <Author>
+                KimYC1223
+            </Author>
+            <Description>
+                Convention Wizard에서 제공하는 클래스의 스니펫입니다.
+            </Description>
+            <HelpUrl>
+            </HelpUrl>
+            <Shortcut>#cw_class</Shortcut>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="csharp" Delimiter="$"> <![CDATA[using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace $NamespaceTitle$ {
+    ///==========================================================================================================================
+    ///
+    ///  $ClassName$
+    ///  ------------------------------------------------------------------------------------------------------------------------
+    ///  <summary>
+    ///  $ClassDescription$
+    ///  </summary>
+    ///
+    ///==========================================================================================================================
+    public class $ClassName$ : $RootClass$
+    {
+      ///======================================================================================================================
+      /// PUBLIC STATIC 변수
+      ///======================================================================================================================
+      /// <summary>
+      /// Public Static 변수 예제
+      /// </summary>
+      public static GameObject StaticPublicExample;
+
+      ///======================================================================================================================
+      /// PUBLIC 멤버 변수
+      ///======================================================================================================================
+      /// <summary>
+      /// Public 멤버 변수 예제
+      /// </summary>
+      public GameObject PublicExample;
+
+      ///======================================================================================================================
+      /// PRIVATE STATIC 변수
+      ///======================================================================================================================
+      private static GameObject staticPrivateExample;             // Private Static 변수 예제
+
+      ///======================================================================================================================
+      /// PRIVATE 멤버 변수
+      ///======================================================================================================================
+      [SerializeField] private GameObject privateExampleSerial;   // Serialized Private 멤버 변수 예제
+
+      private GameObject privateExample;                          // Private 멤버 변수 예제
+
+      ///======================================================================================================================
+      /// <summary>
+      /// Public Method에 대한 설명
+      /// </summary>
+      ///======================================================================================================================
+      public void PublicMethod()
+      {
+
+      }
+
+      ///======================================================================================================================
+      /// Private Method에 대한 설명
+      ///======================================================================================================================
+      private void PrivateMethod()
+      {
+
+      }
+    }
+}
+]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>UnityEngine</Namespace>
+                </Import>
+            </Imports>
+            <Imports>
+                <Import>
+                    <Namespace>System.Collections</Namespace>
+                </Import>
+            </Imports>
+            <Imports>
+                <Import>
+                    <Namespace>System.Collections.Generic22</Namespace>
+                </Import>
+            </Imports>
+            <Declarations>
+                <Literal Editable="true">
+                    <ID>NamespaceTitle</ID>
+                    <ToolTip>만들고자하는 클래스가 속한 네임스페이스입니다.</ToolTip>
+                    <Default>Namespace</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>ClassName</ID>
+                    <ToolTip>만들고자하는 클래스의 이름입니다.</ToolTip>
+                    <Default>ClassName</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>ClassDescription</ID>
+                    <ToolTip>만들고자하는 클래스의 설명입니다.</ToolTip>
+                    <Default>만들고자하는 클래스의 설명을 입력해주세요.</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>RootClass</ID>
+                    <ToolTip>상속 받고자 하는 클래스 이름입니다.</ToolTip>
+                    <Default>MonoBehaviour</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

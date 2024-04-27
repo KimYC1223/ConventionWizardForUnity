@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Member Field Snippet [Convention Wizard]</Title>
+            <Author>
+                KimYC1223
+            </Author>
+            <Description>Convention Wizard에서 제공하는 멤버 필드와 Static 필드 스니펫입니다.</Description>
+            <HelpUrl>
+            </HelpUrl>
+            <Shortcut>#cw_fields</Shortcut>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="csharp" Delimiter="$"> <![CDATA[///======================================================================================================================
+///  PUBLIC STATIC 변수
+///======================================================================================================================
+/// <summary>
+/// Public Static 변수 예제
+/// </summary>
+public static GameObject StaticPublicExample;
+
+///======================================================================================================================
+/// PUBLIC 멤버 변수
+///======================================================================================================================
+/// <summary>
+/// Public 멤버 변수 예제
+/// </summary>
+public GameObject PublicExample;
+
+///======================================================================================================================
+/// PRIVATE STATIC 변수
+///======================================================================================================================
+private static GameObject staticPrivateExample;             // Private Static 변수 예제
+
+///======================================================================================================================
+/// PRIVATE 멤버 변수
+///======================================================================================================================
+[SerializeField] private GameObject privateExampleSerial;   // Serialized Private 멤버 변수 예제
+
+private GameObject privateExample;                          // Private 멤버 변수 예제]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>UnityEngine</Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

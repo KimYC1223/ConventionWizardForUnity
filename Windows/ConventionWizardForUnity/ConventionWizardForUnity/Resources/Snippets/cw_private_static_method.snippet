@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>Private Static Method Snippet [Convention Wizard]</Title>
+            <Author>
+                KimYC1223
+            </Author>
+            <Description>Convention Wizard에서 제공하는 Private Static 메서드 스니펫입니다.</Description>
+            <HelpUrl>
+            </HelpUrl>
+            <Shortcut>#cw_private_static_method</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="csharp" Delimiter="$"><![CDATA[///======================================================================================================================
+/// $MethodName$
+///======================================================================================================================
+private static $ReturnType$ $MethodName$ ()
+{
+
+}]]>
+            </Code>
+            <Declarations>
+                <Literal Editable="true">
+                    <ID>MethodName</ID>
+                    <ToolTip>만들고자하는 메서드 이름입니다.</ToolTip>
+                    <Default>MethodName</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>ReturnType</ID>
+                    <ToolTip>만들고자하는 메서드의 리턴 타입입니다.</ToolTip>
+                    <Default>void</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>Description</ID>
+                    <ToolTip>만들고자 하는 Public 메서드의 설명입니다.</ToolTip>
+                    <Default>Public method입니다.</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

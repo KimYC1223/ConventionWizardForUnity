@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>Public Method Snippet [Convention Wizard]</Title>
+            <Shortcut>#cw_public_method</Shortcut>
+            <Author>
+                KimYC1223
+            </Author>
+            <Description>Convention Wizard에서 제공하는 Public 메서드 스니펫입니다.</Description>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp"><![CDATA[///======================================================================================================================
+/// $MethodName$
+///======================================================================================================================
+/// <summary>
+/// $Description$
+/// </summary>
+public $ReturnType$ $MethodName$ ()
+{
+
+}]]>
+            </Code>
+            <Declarations>
+                <Literal>
+                    <ID>MethodName</ID>
+                    <ToolTip>만들고자하는 메서드 이름입니다.</ToolTip>
+                    <Default>MethodName</Default>
+                </Literal>
+                <Literal>
+                    <ID>ReturnType</ID>
+                    <ToolTip>만들고자하는 메서드의 리턴 타입입니다.</ToolTip>
+                    <Default>void</Default>
+                </Literal>
+                <Literal>
+                    <ID>Description</ID>
+                    <ToolTip>만들고자 하는 Public 메서드의 설명입니다.</ToolTip>
+                    <Default>Public method입니다.</Default>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
