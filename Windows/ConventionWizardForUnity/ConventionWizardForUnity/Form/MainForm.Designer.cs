@@ -7,40 +7,39 @@ namespace ConventionWizardForUnity
         //  WIN FORM UI OBJECT 모음
         // ======================================================================================================================
         #region UI_OBJECTS
-        private System.Windows.Forms.Button InstallGuidelinesButtonVS2022;
-        private System.Windows.Forms.Button InstallGuidelinesButtonVS2019;
-        private System.Windows.Forms.Button InstallSonarLintButtonVS2022;
-        private System.Windows.Forms.Button InstallCodeMaidButtonVS2022;
-        private System.Windows.Forms.Button InstallSonarLintButtonVS2019;
-        private System.Windows.Forms.Button InstallCodeMaidButtonVS2019;
-        private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.PictureBox IconViewer;
-        private System.Windows.Forms.Label TitleCopyrightLabel;
-        private System.Windows.Forms.Label TitleSubLabel;
-        private System.Windows.Forms.Panel HR_1;
-        private System.Windows.Forms.GroupBox VsixInstallGroup;
-        private System.Windows.Forms.GroupBox CodeBaseInstallGroup;
-        private System.Windows.Forms.Label CodeBaseInstallDescLabel_2;
-        private System.Windows.Forms.Label CodeBaseInstallDescLabel_1;
-        private System.Windows.Forms.Label UnityEditorPathLabel;
-        private System.Windows.Forms.TextBox UnityEditorDirPathTextButton;
-        private System.Windows.Forms.GroupBox ApplyConventionSettingGroupBox;
-        private System.Windows.Forms.Label ApplyConventionSettingDescLabel_2;
-        private System.Windows.Forms.Label ApplyConventionSettingDescLabel_1;
-        private System.Windows.Forms.Label UnityProjectPathLabel;
-        private System.Windows.Forms.TextBox UnityProjectDirPathTextButton;
-        private System.Windows.Forms.Label CodeBaseInstallGuideLabel;
-        private System.Windows.Forms.Label ApplyConventionSettingGuideLabel_2;
-        private System.Windows.Forms.Label VersionLabel;
-        private System.Windows.Forms.Label ApplyConventionSettingGuideLabel_1;
-        private System.Windows.Forms.GroupBox SnippetInstallGroupBox;
-        private System.Windows.Forms.Label SnippetInstallDescLabel_1;
-        private System.Windows.Forms.Label SnippetSavePathLabel;
-        private System.Windows.Forms.TextBox SnippetSavePathTextBox;
-        private System.Windows.Forms.Button ApplyConventionButton;
-        private System.Windows.Forms.Panel HR_2;
-        private System.Windows.Forms.Panel HR_3;
-        private System.Windows.Forms.Panel HR_4;
+        private Button InstallGuidelinesButtonVS2022;
+        private Button InstallGuidelinesButtonVS2019;
+        private Button InstallSonarLintButtonVS2022;
+        private Button InstallCodeMaidButtonVS2022;
+        private Button InstallSonarLintButtonVS2019;
+        private Button InstallCodeMaidButtonVS2019;
+        private Label TitleLabel;
+        private PictureBox IconViewer;
+        private Label TitleSubLabel;
+        private Panel HR_1;
+        private GroupBox VsixInstallGroup;
+        private GroupBox CodeBaseInstallGroup;
+        private Label CodeBaseInstallDescLabel_2;
+        private Label CodeBaseInstallDescLabel_1;
+        private Label UnityEditorPathLabel;
+        private TextBox UnityEditorDirPathTextButton;
+        private GroupBox ApplyConventionSettingGroupBox;
+        private Label ApplyConventionSettingDescLabel_2;
+        private Label ApplyConventionSettingDescLabel_1;
+        private Label UnityProjectPathLabel;
+        private TextBox UnityProjectDirPathTextButton;
+        private Label CodeBaseInstallGuideLabel;
+        private Label ApplyConventionSettingGuideLabel_2;
+        private Label VersionLabel;
+        private Label ApplyConventionSettingGuideLabel_1;
+        private GroupBox SnippetInstallGroupBox;
+        private Label SnippetInstallDescLabel_1;
+        private Label SnippetSavePathLabel;
+        private TextBox SnippetSavePathTextBox;
+        private Button ApplyConventionButton;
+        private Panel HR_2;
+        private Panel HR_3;
+        private Panel HR_4;
         #endregion
 
         // ======================================================================================================================
@@ -58,681 +57,673 @@ namespace ConventionWizardForUnity
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button OpenUnityEditorDirButton;
-            System.Windows.Forms.Button CodebaseReplaceButton;
-            System.Windows.Forms.Button CodebaseRollbackButton;
-            System.Windows.Forms.Button OpenUnityProjectDirButton;
-            System.Windows.Forms.Button OpenSnippetSavePathButton;
-            System.Windows.Forms.Button UpdateSnippetButton;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.ApplyConventionButton = new System.Windows.Forms.Button();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.IconViewer = new System.Windows.Forms.PictureBox();
-            this.TitleCopyrightLabel = new System.Windows.Forms.Label();
-            this.TitleSubLabel = new System.Windows.Forms.Label();
-            this.HR_1 = new System.Windows.Forms.Panel();
-            this.VsixInstallGroup = new System.Windows.Forms.GroupBox();
-            this.InstallGuidelinesButtonVS2022 = new System.Windows.Forms.Button();
-            this.InstallGuidelinesButtonVS2019 = new System.Windows.Forms.Button();
-            this.InstallSonarLintButtonVS2022 = new System.Windows.Forms.Button();
-            this.InstallCodeMaidButtonVS2022 = new System.Windows.Forms.Button();
-            this.InstallSonarLintButtonVS2019 = new System.Windows.Forms.Button();
-            this.InstallCodeMaidButtonVS2019 = new System.Windows.Forms.Button();
-            this.CodeBaseInstallGroup = new System.Windows.Forms.GroupBox();
-            this.CodeBaseInstallGuideLabel = new System.Windows.Forms.Label();
-            this.CodeBaseInstallDescLabel_2 = new System.Windows.Forms.Label();
-            this.CodeBaseInstallDescLabel_1 = new System.Windows.Forms.Label();
-            this.UnityEditorPathLabel = new System.Windows.Forms.Label();
-            this.UnityEditorDirPathTextButton = new System.Windows.Forms.TextBox();
-            this.ApplyConventionSettingGroupBox = new System.Windows.Forms.GroupBox();
-            this.CheckConventionLabel = new System.Windows.Forms.LinkLabel();
-            this.ApplyConventionSettingGuideLabel_1 = new System.Windows.Forms.Label();
-            this.ApplyConventionSettingGuideLabel_2 = new System.Windows.Forms.Label();
-            this.ApplyConventionSettingDescLabel_2 = new System.Windows.Forms.Label();
-            this.ApplyConventionSettingDescLabel_1 = new System.Windows.Forms.Label();
-            this.UnityProjectPathLabel = new System.Windows.Forms.Label();
-            this.UnityProjectDirPathTextButton = new System.Windows.Forms.TextBox();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.SnippetInstallGroupBox = new System.Windows.Forms.GroupBox();
-            this.SnippetGuideLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.SnippetWikiLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.SnippetInstallDescLabel_1 = new System.Windows.Forms.Label();
-            this.SnippetSavePathLabel = new System.Windows.Forms.Label();
-            this.SnippetSavePathTextBox = new System.Windows.Forms.TextBox();
-            this.HR_2 = new System.Windows.Forms.Panel();
-            this.HR_3 = new System.Windows.Forms.Panel();
-            this.HR_4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.FileMenuButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.ResourceDirOpenButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolMenuButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.CustomToolButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpMenuButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpenGithubButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpenBlogButton = new System.Windows.Forms.ToolStripMenuItem();
-            OpenUnityEditorDirButton = new System.Windows.Forms.Button();
-            CodebaseReplaceButton = new System.Windows.Forms.Button();
-            CodebaseRollbackButton = new System.Windows.Forms.Button();
-            OpenUnityProjectDirButton = new System.Windows.Forms.Button();
-            OpenSnippetSavePathButton = new System.Windows.Forms.Button();
-            UpdateSnippetButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.IconViewer)).BeginInit();
-            this.VsixInstallGroup.SuspendLayout();
-            this.CodeBaseInstallGroup.SuspendLayout();
-            this.ApplyConventionSettingGroupBox.SuspendLayout();
-            this.SnippetInstallGroupBox.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            Button OpenUnityEditorDirButton;
+            Button CodebaseReplaceButton;
+            Button CodebaseRollbackButton;
+            Button OpenUnityProjectDirButton;
+            Button OpenSnippetSavePathButton;
+            Button UpdateSnippetButton;
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            ApplyConventionButton = new Button();
+            TitleLabel = new Label();
+            IconViewer = new PictureBox();
+            TitleSubLabel = new Label();
+            HR_1 = new Panel();
+            VsixInstallGroup = new GroupBox();
+            InstallGuidelinesButtonVS2022 = new Button();
+            InstallGuidelinesButtonVS2019 = new Button();
+            InstallSonarLintButtonVS2022 = new Button();
+            InstallCodeMaidButtonVS2022 = new Button();
+            InstallSonarLintButtonVS2019 = new Button();
+            InstallCodeMaidButtonVS2019 = new Button();
+            CodeBaseInstallGroup = new GroupBox();
+            CodeBaseInstallGuideLabel = new Label();
+            CodeBaseInstallDescLabel_2 = new Label();
+            CodeBaseInstallDescLabel_1 = new Label();
+            UnityEditorPathLabel = new Label();
+            UnityEditorDirPathTextButton = new TextBox();
+            ApplyConventionSettingGroupBox = new GroupBox();
+            CheckConventionLabel = new LinkLabel();
+            ApplyConventionSettingGuideLabel_1 = new Label();
+            ApplyConventionSettingGuideLabel_2 = new Label();
+            ApplyConventionSettingDescLabel_2 = new Label();
+            ApplyConventionSettingDescLabel_1 = new Label();
+            UnityProjectPathLabel = new Label();
+            UnityProjectDirPathTextButton = new TextBox();
+            VersionLabel = new Label();
+            SnippetInstallGroupBox = new GroupBox();
+            SnippetGuideLinkLabel = new LinkLabel();
+            SnippetWikiLinkLabel = new LinkLabel();
+            SnippetInstallDescLabel_1 = new Label();
+            SnippetSavePathLabel = new Label();
+            SnippetSavePathTextBox = new TextBox();
+            HR_2 = new Panel();
+            HR_3 = new Panel();
+            HR_4 = new Panel();
+            TeamNameLabel = new Label();
+            menuStrip1 = new MenuStrip();
+            FileMenuButton = new ToolStripMenuItem();
+            ResourceDirOpenButton = new ToolStripMenuItem();
+            ToolMenuButton = new ToolStripMenuItem();
+            CustomToolButton = new ToolStripMenuItem();
+            HelpMenuButton = new ToolStripMenuItem();
+            OpenGithubButton = new ToolStripMenuItem();
+            OpenBlogButton = new ToolStripMenuItem();
+            OpenUnityEditorDirButton = new Button();
+            CodebaseReplaceButton = new Button();
+            CodebaseRollbackButton = new Button();
+            OpenUnityProjectDirButton = new Button();
+            OpenSnippetSavePathButton = new Button();
+            UpdateSnippetButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)IconViewer).BeginInit();
+            VsixInstallGroup.SuspendLayout();
+            CodeBaseInstallGroup.SuspendLayout();
+            ApplyConventionSettingGroupBox.SuspendLayout();
+            SnippetInstallGroupBox.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // OpenUnityEditorDirButton
             // 
-            OpenUnityEditorDirButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            OpenUnityEditorDirButton.Location = new System.Drawing.Point(350, 61);
+            OpenUnityEditorDirButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            OpenUnityEditorDirButton.Location = new Point(350, 68);
+            OpenUnityEditorDirButton.Margin = new Padding(3, 4, 3, 4);
             OpenUnityEditorDirButton.Name = "OpenUnityEditorDirButton";
-            OpenUnityEditorDirButton.Size = new System.Drawing.Size(77, 22);
+            OpenUnityEditorDirButton.Size = new Size(77, 24);
             OpenUnityEditorDirButton.TabIndex = 14;
             OpenUnityEditorDirButton.Text = "찾기";
             OpenUnityEditorDirButton.UseVisualStyleBackColor = true;
-            OpenUnityEditorDirButton.Click += new System.EventHandler(this.OpenUnityEditorDirButton_Click);
+            OpenUnityEditorDirButton.Click += OpenUnityEditorDirButton_Click;
             // 
             // CodebaseReplaceButton
             // 
-            CodebaseReplaceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            CodebaseReplaceButton.Location = new System.Drawing.Point(230, 92);
+            CodebaseReplaceButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            CodebaseReplaceButton.Location = new Point(230, 99);
+            CodebaseReplaceButton.Margin = new Padding(3, 4, 3, 4);
             CodebaseReplaceButton.Name = "CodebaseReplaceButton";
-            CodebaseReplaceButton.Size = new System.Drawing.Size(197, 26);
+            CodebaseReplaceButton.Size = new Size(197, 24);
             CodebaseReplaceButton.TabIndex = 13;
             CodebaseReplaceButton.Text = "코드베이스 변경";
             CodebaseReplaceButton.UseVisualStyleBackColor = true;
-            CodebaseReplaceButton.Click += new System.EventHandler(this.CodebaseReplaceButton_Click);
+            CodebaseReplaceButton.Click += CodebaseReplaceButton_Click;
             // 
             // CodebaseRollbackButton
             // 
-            CodebaseRollbackButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            CodebaseRollbackButton.Location = new System.Drawing.Point(15, 92);
+            CodebaseRollbackButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            CodebaseRollbackButton.Location = new Point(15, 99);
+            CodebaseRollbackButton.Margin = new Padding(3, 4, 3, 4);
             CodebaseRollbackButton.Name = "CodebaseRollbackButton";
-            CodebaseRollbackButton.Size = new System.Drawing.Size(197, 26);
+            CodebaseRollbackButton.Size = new Size(197, 24);
             CodebaseRollbackButton.TabIndex = 4;
             CodebaseRollbackButton.Text = "원복시키기";
             CodebaseRollbackButton.UseVisualStyleBackColor = true;
-            CodebaseRollbackButton.Click += new System.EventHandler(this.CodebaseRollbackButton_Click);
+            CodebaseRollbackButton.Click += CodebaseRollbackButton_Click;
             // 
             // OpenUnityProjectDirButton
             // 
-            OpenUnityProjectDirButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            OpenUnityProjectDirButton.Location = new System.Drawing.Point(350, 59);
+            OpenUnityProjectDirButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            OpenUnityProjectDirButton.Location = new Point(350, 62);
+            OpenUnityProjectDirButton.Margin = new Padding(3, 4, 3, 4);
             OpenUnityProjectDirButton.Name = "OpenUnityProjectDirButton";
-            OpenUnityProjectDirButton.Size = new System.Drawing.Size(77, 22);
+            OpenUnityProjectDirButton.Size = new Size(77, 24);
             OpenUnityProjectDirButton.TabIndex = 14;
             OpenUnityProjectDirButton.Text = "찾기";
             OpenUnityProjectDirButton.UseVisualStyleBackColor = true;
-            OpenUnityProjectDirButton.Click += new System.EventHandler(this.OpenUnityProjectDirButton_Click);
+            OpenUnityProjectDirButton.Click += OpenUnityProjectDirButton_Click;
             // 
             // OpenSnippetSavePathButton
             // 
-            OpenSnippetSavePathButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            OpenSnippetSavePathButton.Location = new System.Drawing.Point(350, 43);
+            OpenSnippetSavePathButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            OpenSnippetSavePathButton.Location = new Point(350, 46);
+            OpenSnippetSavePathButton.Margin = new Padding(3, 4, 3, 4);
             OpenSnippetSavePathButton.Name = "OpenSnippetSavePathButton";
-            OpenSnippetSavePathButton.Size = new System.Drawing.Size(77, 22);
+            OpenSnippetSavePathButton.Size = new Size(77, 24);
             OpenSnippetSavePathButton.TabIndex = 14;
             OpenSnippetSavePathButton.Text = "찾기";
             OpenSnippetSavePathButton.UseVisualStyleBackColor = true;
-            OpenSnippetSavePathButton.Click += new System.EventHandler(this.OpenSnippetSavePathButton_Click);
+            OpenSnippetSavePathButton.Click += OpenSnippetSavePathButton_Click;
             // 
             // UpdateSnippetButton
             // 
-            UpdateSnippetButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            UpdateSnippetButton.Location = new System.Drawing.Point(16, 70);
+            UpdateSnippetButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            UpdateSnippetButton.Location = new Point(16, 79);
+            UpdateSnippetButton.Margin = new Padding(3, 4, 3, 4);
             UpdateSnippetButton.Name = "UpdateSnippetButton";
-            UpdateSnippetButton.Size = new System.Drawing.Size(412, 26);
+            UpdateSnippetButton.Size = new Size(412, 24);
             UpdateSnippetButton.TabIndex = 13;
             UpdateSnippetButton.Text = "C# 코드 스니펫 다운로드 및 업데이트";
             UpdateSnippetButton.UseVisualStyleBackColor = true;
-            UpdateSnippetButton.Click += new System.EventHandler(this.UpdateSnippetButton_Click);
+            UpdateSnippetButton.Click += UpdateSnippetButton_Click;
             // 
             // ApplyConventionButton
             // 
-            this.ApplyConventionButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyConventionButton.Location = new System.Drawing.Point(15, 91);
-            this.ApplyConventionButton.Name = "ApplyConventionButton";
-            this.ApplyConventionButton.Size = new System.Drawing.Size(412, 26);
-            this.ApplyConventionButton.TabIndex = 13;
-            this.ApplyConventionButton.Text = "Unity 프로젝트에 코드 컨벤션 적용";
-            this.ApplyConventionButton.UseVisualStyleBackColor = true;
-            this.ApplyConventionButton.Click += new System.EventHandler(this.ApplyConventionButton_Click);
+            ApplyConventionButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            ApplyConventionButton.Location = new Point(15, 94);
+            ApplyConventionButton.Margin = new Padding(3, 4, 3, 4);
+            ApplyConventionButton.Name = "ApplyConventionButton";
+            ApplyConventionButton.Size = new Size(412, 24);
+            ApplyConventionButton.TabIndex = 13;
+            ApplyConventionButton.Text = "Unity 프로젝트에 코드 컨벤션 적용";
+            ApplyConventionButton.UseVisualStyleBackColor = true;
+            ApplyConventionButton.Click += ApplyConventionButton_Click;
             // 
             // TitleLabel
             // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("D2Coding", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TitleLabel.Location = new System.Drawing.Point(122, 30);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(280, 24);
-            this.TitleLabel.TabIndex = 0;
-            this.TitleLabel.Text = "Convention Wizard For Unity";
+            TitleLabel.AutoSize = true;
+            TitleLabel.Font = new Font("D2Coding", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            TitleLabel.Location = new Point(122, 38);
+            TitleLabel.Name = "TitleLabel";
+            TitleLabel.Size = new Size(280, 24);
+            TitleLabel.TabIndex = 0;
+            TitleLabel.Text = "Convention Wizard For Unity";
             // 
             // IconViewer
             // 
-            this.IconViewer.Image = global::ConventionWizardForUnity.Properties.Resources.Icon;
-            this.IconViewer.Location = new System.Drawing.Point(19, 24);
-            this.IconViewer.Name = "IconViewer";
-            this.IconViewer.Size = new System.Drawing.Size(100, 100);
-            this.IconViewer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IconViewer.TabIndex = 1;
-            this.IconViewer.TabStop = false;
-            // 
-            // TitleCopyrightLabel
-            // 
-            this.TitleCopyrightLabel.AutoSize = true;
-            this.TitleCopyrightLabel.Enabled = false;
-            this.TitleCopyrightLabel.Font = new System.Drawing.Font("D2Coding", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TitleCopyrightLabel.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.TitleCopyrightLabel.Location = new System.Drawing.Point(135, 81);
-            this.TitleCopyrightLabel.Name = "TitleCopyrightLabel";
-            this.TitleCopyrightLabel.Size = new System.Drawing.Size(187, 14);
-            this.TitleCopyrightLabel.TabIndex = 2;
-            this.TitleCopyrightLabel.Text = "Developed by KimYC1223 2024.04";
+            IconViewer.Image = Properties.Resources.Icon;
+            IconViewer.Location = new Point(19, 38);
+            IconViewer.Margin = new Padding(3, 4, 3, 4);
+            IconViewer.Name = "IconViewer";
+            IconViewer.Size = new Size(100, 100);
+            IconViewer.SizeMode = PictureBoxSizeMode.StretchImage;
+            IconViewer.TabIndex = 1;
+            IconViewer.TabStop = false;
             // 
             // TitleSubLabel
             // 
-            this.TitleSubLabel.AutoSize = true;
-            this.TitleSubLabel.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TitleSubLabel.Location = new System.Drawing.Point(27, 129);
-            this.TitleSubLabel.Name = "TitleSubLabel";
-            this.TitleSubLabel.Size = new System.Drawing.Size(336, 12);
-            this.TitleSubLabel.TabIndex = 4;
-            this.TitleSubLabel.Text = "Unity C# 개발자용 코드 컨벤션 유지를 위한 환경 설정 도우미";
+            TitleSubLabel.AutoSize = true;
+            TitleSubLabel.Font = new Font("굴림", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            TitleSubLabel.Location = new Point(136, 112);
+            TitleSubLabel.Name = "TitleSubLabel";
+            TitleSubLabel.Size = new Size(310, 12);
+            TitleSubLabel.TabIndex = 4;
+            TitleSubLabel.Text = "Unity / C# 용 코드 컨벤션 유지를 위한 환경 설정 도우미";
             // 
             // HR_1
             // 
-            this.HR_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HR_1.Location = new System.Drawing.Point(29, 156);
-            this.HR_1.Name = "HR_1";
-            this.HR_1.Size = new System.Drawing.Size(442, 4);
-            this.HR_1.TabIndex = 6;
+            HR_1.BorderStyle = BorderStyle.Fixed3D;
+            HR_1.Location = new Point(28, 140);
+            HR_1.Margin = new Padding(3, 4, 3, 4);
+            HR_1.Name = "HR_1";
+            HR_1.Size = new Size(442, 4);
+            HR_1.TabIndex = 6;
             // 
             // VsixInstallGroup
             // 
-            this.VsixInstallGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.VsixInstallGroup.Controls.Add(this.InstallGuidelinesButtonVS2022);
-            this.VsixInstallGroup.Controls.Add(this.InstallGuidelinesButtonVS2019);
-            this.VsixInstallGroup.Controls.Add(this.InstallSonarLintButtonVS2022);
-            this.VsixInstallGroup.Controls.Add(this.InstallCodeMaidButtonVS2022);
-            this.VsixInstallGroup.Controls.Add(this.InstallSonarLintButtonVS2019);
-            this.VsixInstallGroup.Controls.Add(this.InstallCodeMaidButtonVS2019);
-            this.VsixInstallGroup.Location = new System.Drawing.Point(29, 172);
-            this.VsixInstallGroup.Name = "VsixInstallGroup";
-            this.VsixInstallGroup.Size = new System.Drawing.Size(442, 128);
-            this.VsixInstallGroup.TabIndex = 7;
-            this.VsixInstallGroup.TabStop = false;
-            this.VsixInstallGroup.Text = "Visual Studio용 VSIX 설치";
+            VsixInstallGroup.BackgroundImageLayout = ImageLayout.None;
+            VsixInstallGroup.Controls.Add(InstallGuidelinesButtonVS2022);
+            VsixInstallGroup.Controls.Add(InstallGuidelinesButtonVS2019);
+            VsixInstallGroup.Controls.Add(InstallSonarLintButtonVS2022);
+            VsixInstallGroup.Controls.Add(InstallCodeMaidButtonVS2022);
+            VsixInstallGroup.Controls.Add(InstallSonarLintButtonVS2019);
+            VsixInstallGroup.Controls.Add(InstallCodeMaidButtonVS2019);
+            VsixInstallGroup.Location = new Point(28, 154);
+            VsixInstallGroup.Margin = new Padding(3, 4, 3, 4);
+            VsixInstallGroup.Name = "VsixInstallGroup";
+            VsixInstallGroup.Padding = new Padding(3, 4, 3, 4);
+            VsixInstallGroup.Size = new Size(442, 124);
+            VsixInstallGroup.TabIndex = 7;
+            VsixInstallGroup.TabStop = false;
+            VsixInstallGroup.Text = "Visual Studio용 VSIX 설치";
             // 
             // InstallGuidelinesButtonVS2022
             // 
-            this.InstallGuidelinesButtonVS2022.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallGuidelinesButtonVS2022.Location = new System.Drawing.Point(227, 88);
-            this.InstallGuidelinesButtonVS2022.Name = "InstallGuidelinesButtonVS2022";
-            this.InstallGuidelinesButtonVS2022.Size = new System.Drawing.Size(200, 26);
-            this.InstallGuidelinesButtonVS2022.TabIndex = 8;
-            this.InstallGuidelinesButtonVS2022.Text = "Guidelines 설치 (VS2022)";
-            this.InstallGuidelinesButtonVS2022.UseVisualStyleBackColor = true;
-            this.InstallGuidelinesButtonVS2022.Click += new System.EventHandler(this.InstallGuidelinesButtonVS2022_Click);
+            InstallGuidelinesButtonVS2022.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InstallGuidelinesButtonVS2022.Location = new Point(227, 86);
+            InstallGuidelinesButtonVS2022.Margin = new Padding(3, 4, 3, 4);
+            InstallGuidelinesButtonVS2022.Name = "InstallGuidelinesButtonVS2022";
+            InstallGuidelinesButtonVS2022.Size = new Size(200, 24);
+            InstallGuidelinesButtonVS2022.TabIndex = 8;
+            InstallGuidelinesButtonVS2022.Text = "Guidelines 설치 (VS2022)";
+            InstallGuidelinesButtonVS2022.UseVisualStyleBackColor = true;
+            InstallGuidelinesButtonVS2022.Click += InstallGuidelinesButtonVS2022_Click;
             // 
             // InstallGuidelinesButtonVS2019
             // 
-            this.InstallGuidelinesButtonVS2019.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallGuidelinesButtonVS2019.Location = new System.Drawing.Point(15, 88);
-            this.InstallGuidelinesButtonVS2019.Name = "InstallGuidelinesButtonVS2019";
-            this.InstallGuidelinesButtonVS2019.Size = new System.Drawing.Size(200, 26);
-            this.InstallGuidelinesButtonVS2019.TabIndex = 7;
-            this.InstallGuidelinesButtonVS2019.Text = "Guidelines 설치 (VS2019)";
-            this.InstallGuidelinesButtonVS2019.UseVisualStyleBackColor = true;
-            this.InstallGuidelinesButtonVS2019.Click += new System.EventHandler(this.InstallGuidelinesButtonVS2019_Click);
+            InstallGuidelinesButtonVS2019.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InstallGuidelinesButtonVS2019.Location = new Point(15, 86);
+            InstallGuidelinesButtonVS2019.Margin = new Padding(3, 4, 3, 4);
+            InstallGuidelinesButtonVS2019.Name = "InstallGuidelinesButtonVS2019";
+            InstallGuidelinesButtonVS2019.Size = new Size(200, 24);
+            InstallGuidelinesButtonVS2019.TabIndex = 7;
+            InstallGuidelinesButtonVS2019.Text = "Guidelines 설치 (VS2019)";
+            InstallGuidelinesButtonVS2019.UseVisualStyleBackColor = true;
+            InstallGuidelinesButtonVS2019.Click += InstallGuidelinesButtonVS2019_Click;
             // 
             // InstallSonarLintButtonVS2022
             // 
-            this.InstallSonarLintButtonVS2022.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallSonarLintButtonVS2022.Location = new System.Drawing.Point(227, 56);
-            this.InstallSonarLintButtonVS2022.Name = "InstallSonarLintButtonVS2022";
-            this.InstallSonarLintButtonVS2022.Size = new System.Drawing.Size(200, 26);
-            this.InstallSonarLintButtonVS2022.TabIndex = 6;
-            this.InstallSonarLintButtonVS2022.Text = "SonarLint 설치 (VS2022)";
-            this.InstallSonarLintButtonVS2022.UseVisualStyleBackColor = true;
-            this.InstallSonarLintButtonVS2022.Click += new System.EventHandler(this.InstallSonarLintButtonVS2022_Click);
+            InstallSonarLintButtonVS2022.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InstallSonarLintButtonVS2022.Location = new Point(227, 56);
+            InstallSonarLintButtonVS2022.Margin = new Padding(3, 4, 3, 4);
+            InstallSonarLintButtonVS2022.Name = "InstallSonarLintButtonVS2022";
+            InstallSonarLintButtonVS2022.Size = new Size(200, 24);
+            InstallSonarLintButtonVS2022.TabIndex = 6;
+            InstallSonarLintButtonVS2022.Text = "SonarLint 설치 (VS2022)";
+            InstallSonarLintButtonVS2022.UseVisualStyleBackColor = true;
+            InstallSonarLintButtonVS2022.Click += InstallSonarLintButtonVS2022_Click;
             // 
             // InstallCodeMaidButtonVS2022
             // 
-            this.InstallCodeMaidButtonVS2022.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallCodeMaidButtonVS2022.Location = new System.Drawing.Point(227, 24);
-            this.InstallCodeMaidButtonVS2022.Name = "InstallCodeMaidButtonVS2022";
-            this.InstallCodeMaidButtonVS2022.Size = new System.Drawing.Size(200, 26);
-            this.InstallCodeMaidButtonVS2022.TabIndex = 5;
-            this.InstallCodeMaidButtonVS2022.Text = "CodeMaid 설치 (VS2022)";
-            this.InstallCodeMaidButtonVS2022.UseVisualStyleBackColor = true;
-            this.InstallCodeMaidButtonVS2022.Click += new System.EventHandler(this.InstallCodeMaidButtonVS2022_Click);
+            InstallCodeMaidButtonVS2022.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InstallCodeMaidButtonVS2022.Location = new Point(227, 26);
+            InstallCodeMaidButtonVS2022.Margin = new Padding(3, 4, 3, 4);
+            InstallCodeMaidButtonVS2022.Name = "InstallCodeMaidButtonVS2022";
+            InstallCodeMaidButtonVS2022.Size = new Size(200, 24);
+            InstallCodeMaidButtonVS2022.TabIndex = 5;
+            InstallCodeMaidButtonVS2022.Text = "CodeMaid 설치 (VS2022)";
+            InstallCodeMaidButtonVS2022.UseVisualStyleBackColor = true;
+            InstallCodeMaidButtonVS2022.Click += InstallCodeMaidButtonVS2022_Click;
             // 
             // InstallSonarLintButtonVS2019
             // 
-            this.InstallSonarLintButtonVS2019.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallSonarLintButtonVS2019.Location = new System.Drawing.Point(15, 56);
-            this.InstallSonarLintButtonVS2019.Name = "InstallSonarLintButtonVS2019";
-            this.InstallSonarLintButtonVS2019.Size = new System.Drawing.Size(200, 26);
-            this.InstallSonarLintButtonVS2019.TabIndex = 4;
-            this.InstallSonarLintButtonVS2019.Text = "SonarLint 설치 (VS2019)";
-            this.InstallSonarLintButtonVS2019.UseVisualStyleBackColor = true;
-            this.InstallSonarLintButtonVS2019.Click += new System.EventHandler(this.InstallSonarLintButtonVS2019_Click);
+            InstallSonarLintButtonVS2019.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InstallSonarLintButtonVS2019.Location = new Point(15, 56);
+            InstallSonarLintButtonVS2019.Margin = new Padding(3, 4, 3, 4);
+            InstallSonarLintButtonVS2019.Name = "InstallSonarLintButtonVS2019";
+            InstallSonarLintButtonVS2019.Size = new Size(200, 24);
+            InstallSonarLintButtonVS2019.TabIndex = 4;
+            InstallSonarLintButtonVS2019.Text = "SonarLint 설치 (VS2019)";
+            InstallSonarLintButtonVS2019.UseVisualStyleBackColor = true;
+            InstallSonarLintButtonVS2019.Click += InstallSonarLintButtonVS2019_Click;
             // 
             // InstallCodeMaidButtonVS2019
             // 
-            this.InstallCodeMaidButtonVS2019.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.InstallCodeMaidButtonVS2019.Location = new System.Drawing.Point(15, 24);
-            this.InstallCodeMaidButtonVS2019.Name = "InstallCodeMaidButtonVS2019";
-            this.InstallCodeMaidButtonVS2019.Size = new System.Drawing.Size(200, 26);
-            this.InstallCodeMaidButtonVS2019.TabIndex = 3;
-            this.InstallCodeMaidButtonVS2019.Text = "CodeMaid 설치 (VS2019)";
-            this.InstallCodeMaidButtonVS2019.UseVisualStyleBackColor = true;
-            this.InstallCodeMaidButtonVS2019.Click += new System.EventHandler(this.InstallCodeMaidButtonVS2019_Click);
+            InstallCodeMaidButtonVS2019.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InstallCodeMaidButtonVS2019.Location = new Point(15, 26);
+            InstallCodeMaidButtonVS2019.Margin = new Padding(3, 4, 3, 4);
+            InstallCodeMaidButtonVS2019.Name = "InstallCodeMaidButtonVS2019";
+            InstallCodeMaidButtonVS2019.Size = new Size(200, 24);
+            InstallCodeMaidButtonVS2019.TabIndex = 3;
+            InstallCodeMaidButtonVS2019.Text = "CodeMaid 설치 (VS2019)";
+            InstallCodeMaidButtonVS2019.UseVisualStyleBackColor = true;
+            InstallCodeMaidButtonVS2019.Click += InstallCodeMaidButtonVS2019_Click;
             // 
             // CodeBaseInstallGroup
             // 
-            this.CodeBaseInstallGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CodeBaseInstallGroup.Controls.Add(this.CodeBaseInstallGuideLabel);
-            this.CodeBaseInstallGroup.Controls.Add(OpenUnityEditorDirButton);
-            this.CodeBaseInstallGroup.Controls.Add(CodebaseReplaceButton);
-            this.CodeBaseInstallGroup.Controls.Add(this.CodeBaseInstallDescLabel_2);
-            this.CodeBaseInstallGroup.Controls.Add(this.CodeBaseInstallDescLabel_1);
-            this.CodeBaseInstallGroup.Controls.Add(this.UnityEditorPathLabel);
-            this.CodeBaseInstallGroup.Controls.Add(this.UnityEditorDirPathTextButton);
-            this.CodeBaseInstallGroup.Controls.Add(CodebaseRollbackButton);
-            this.CodeBaseInstallGroup.Location = new System.Drawing.Point(29, 328);
-            this.CodeBaseInstallGroup.Name = "CodeBaseInstallGroup";
-            this.CodeBaseInstallGroup.Size = new System.Drawing.Size(442, 153);
-            this.CodeBaseInstallGroup.TabIndex = 9;
-            this.CodeBaseInstallGroup.TabStop = false;
-            this.CodeBaseInstallGroup.Text = "Unity 코드 베이스 수정하기";
+            CodeBaseInstallGroup.BackgroundImageLayout = ImageLayout.None;
+            CodeBaseInstallGroup.Controls.Add(CodeBaseInstallGuideLabel);
+            CodeBaseInstallGroup.Controls.Add(OpenUnityEditorDirButton);
+            CodeBaseInstallGroup.Controls.Add(CodebaseReplaceButton);
+            CodeBaseInstallGroup.Controls.Add(CodeBaseInstallDescLabel_2);
+            CodeBaseInstallGroup.Controls.Add(CodeBaseInstallDescLabel_1);
+            CodeBaseInstallGroup.Controls.Add(UnityEditorPathLabel);
+            CodeBaseInstallGroup.Controls.Add(UnityEditorDirPathTextButton);
+            CodeBaseInstallGroup.Controls.Add(CodebaseRollbackButton);
+            CodeBaseInstallGroup.Location = new Point(28, 302);
+            CodeBaseInstallGroup.Margin = new Padding(3, 4, 3, 4);
+            CodeBaseInstallGroup.Name = "CodeBaseInstallGroup";
+            CodeBaseInstallGroup.Padding = new Padding(3, 4, 3, 4);
+            CodeBaseInstallGroup.Size = new Size(442, 164);
+            CodeBaseInstallGroup.TabIndex = 9;
+            CodeBaseInstallGroup.TabStop = false;
+            CodeBaseInstallGroup.Text = "Unity 코드 베이스 수정하기";
             // 
             // CodeBaseInstallGuideLabel
             // 
-            this.CodeBaseInstallGuideLabel.AutoSize = true;
-            this.CodeBaseInstallGuideLabel.ForeColor = System.Drawing.Color.Teal;
-            this.CodeBaseInstallGuideLabel.Location = new System.Drawing.Point(16, 127);
-            this.CodeBaseInstallGuideLabel.Name = "CodeBaseInstallGuideLabel";
-            this.CodeBaseInstallGuideLabel.Size = new System.Drawing.Size(247, 12);
-            this.CodeBaseInstallGuideLabel.TabIndex = 15;
-            this.CodeBaseInstallGuideLabel.Text = "기본 값은 C:\\Program Files\\Unity 입니다.";
+            CodeBaseInstallGuideLabel.AutoSize = true;
+            CodeBaseInstallGuideLabel.ForeColor = Color.Teal;
+            CodeBaseInstallGuideLabel.Location = new Point(13, 133);
+            CodeBaseInstallGuideLabel.Name = "CodeBaseInstallGuideLabel";
+            CodeBaseInstallGuideLabel.Size = new Size(236, 15);
+            CodeBaseInstallGuideLabel.TabIndex = 15;
+            CodeBaseInstallGuideLabel.Text = "기본 값은 C:\\Program Files\\Unity 입니다.";
             // 
             // CodeBaseInstallDescLabel_2
             // 
-            this.CodeBaseInstallDescLabel_2.AutoSize = true;
-            this.CodeBaseInstallDescLabel_2.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CodeBaseInstallDescLabel_2.ForeColor = System.Drawing.Color.Gray;
-            this.CodeBaseInstallDescLabel_2.Location = new System.Drawing.Point(13, 41);
-            this.CodeBaseInstallDescLabel_2.Name = "CodeBaseInstallDescLabel_2";
-            this.CodeBaseInstallDescLabel_2.Size = new System.Drawing.Size(367, 11);
-            this.CodeBaseInstallDescLabel_2.TabIndex = 12;
-            this.CodeBaseInstallDescLabel_2.Text = "되도록 하는 기능입니다. (프로젝트에 상관없이 에디터 버전에 전체 적용)";
+            CodeBaseInstallDescLabel_2.AutoSize = true;
+            CodeBaseInstallDescLabel_2.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            CodeBaseInstallDescLabel_2.ForeColor = Color.Gray;
+            CodeBaseInstallDescLabel_2.Location = new Point(13, 47);
+            CodeBaseInstallDescLabel_2.Name = "CodeBaseInstallDescLabel_2";
+            CodeBaseInstallDescLabel_2.Size = new Size(367, 11);
+            CodeBaseInstallDescLabel_2.TabIndex = 12;
+            CodeBaseInstallDescLabel_2.Text = "되도록 하는 기능입니다. (프로젝트에 상관없이 에디터 버전에 전체 적용)";
             // 
             // CodeBaseInstallDescLabel_1
             // 
-            this.CodeBaseInstallDescLabel_1.AutoSize = true;
-            this.CodeBaseInstallDescLabel_1.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CodeBaseInstallDescLabel_1.ForeColor = System.Drawing.Color.Gray;
-            this.CodeBaseInstallDescLabel_1.Location = new System.Drawing.Point(13, 22);
-            this.CodeBaseInstallDescLabel_1.Name = "CodeBaseInstallDescLabel_1";
-            this.CodeBaseInstallDescLabel_1.Size = new System.Drawing.Size(377, 11);
-            this.CodeBaseInstallDescLabel_1.TabIndex = 11;
-            this.CodeBaseInstallDescLabel_1.Text = "Unity Editor에서, 새로운 C# 파일을 만들 때 자동으로 코드 스타일이 적용";
+            CodeBaseInstallDescLabel_1.AutoSize = true;
+            CodeBaseInstallDescLabel_1.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            CodeBaseInstallDescLabel_1.ForeColor = Color.Gray;
+            CodeBaseInstallDescLabel_1.Location = new Point(13, 28);
+            CodeBaseInstallDescLabel_1.Name = "CodeBaseInstallDescLabel_1";
+            CodeBaseInstallDescLabel_1.Size = new Size(377, 11);
+            CodeBaseInstallDescLabel_1.TabIndex = 11;
+            CodeBaseInstallDescLabel_1.Text = "Unity Editor에서, 새로운 C# 파일을 만들 때 자동으로 코드 스타일이 적용";
             // 
             // UnityEditorPathLabel
             // 
-            this.UnityEditorPathLabel.AutoSize = true;
-            this.UnityEditorPathLabel.Location = new System.Drawing.Point(13, 67);
-            this.UnityEditorPathLabel.Name = "UnityEditorPathLabel";
-            this.UnityEditorPathLabel.Size = new System.Drawing.Size(125, 12);
-            this.UnityEditorPathLabel.TabIndex = 10;
-            this.UnityEditorPathLabel.Text = "Unity Editor 설치 경로";
+            UnityEditorPathLabel.AutoSize = true;
+            UnityEditorPathLabel.Location = new Point(13, 73);
+            UnityEditorPathLabel.Name = "UnityEditorPathLabel";
+            UnityEditorPathLabel.Size = new Size(126, 15);
+            UnityEditorPathLabel.TabIndex = 10;
+            UnityEditorPathLabel.Text = "Unity Editor 설치 경로";
             // 
             // UnityEditorDirPathTextButton
             // 
-            this.UnityEditorDirPathTextButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UnityEditorDirPathTextButton.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UnityEditorDirPathTextButton.Location = new System.Drawing.Point(147, 61);
-            this.UnityEditorDirPathTextButton.Margin = new System.Windows.Forms.Padding(0);
-            this.UnityEditorDirPathTextButton.Name = "UnityEditorDirPathTextButton";
-            this.UnityEditorDirPathTextButton.ReadOnly = true;
-            this.UnityEditorDirPathTextButton.Size = new System.Drawing.Size(197, 20);
-            this.UnityEditorDirPathTextButton.TabIndex = 5;
-            this.UnityEditorDirPathTextButton.Text = "C:\\Program Files\\Unity";
+            UnityEditorDirPathTextButton.BorderStyle = BorderStyle.FixedSingle;
+            UnityEditorDirPathTextButton.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            UnityEditorDirPathTextButton.Location = new Point(147, 70);
+            UnityEditorDirPathTextButton.Margin = new Padding(0);
+            UnityEditorDirPathTextButton.Name = "UnityEditorDirPathTextButton";
+            UnityEditorDirPathTextButton.ReadOnly = true;
+            UnityEditorDirPathTextButton.Size = new Size(197, 20);
+            UnityEditorDirPathTextButton.TabIndex = 5;
+            UnityEditorDirPathTextButton.Text = "C:\\Program Files\\Unity";
             // 
             // ApplyConventionSettingGroupBox
             // 
-            this.ApplyConventionSettingGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.CheckConventionLabel);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.ApplyConventionSettingGuideLabel_1);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.ApplyConventionSettingGuideLabel_2);
-            this.ApplyConventionSettingGroupBox.Controls.Add(OpenUnityProjectDirButton);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.ApplyConventionButton);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.ApplyConventionSettingDescLabel_2);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.ApplyConventionSettingDescLabel_1);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.UnityProjectPathLabel);
-            this.ApplyConventionSettingGroupBox.Controls.Add(this.UnityProjectDirPathTextButton);
-            this.ApplyConventionSettingGroupBox.Location = new System.Drawing.Point(29, 509);
-            this.ApplyConventionSettingGroupBox.Name = "ApplyConventionSettingGroupBox";
-            this.ApplyConventionSettingGroupBox.Size = new System.Drawing.Size(442, 192);
-            this.ApplyConventionSettingGroupBox.TabIndex = 15;
-            this.ApplyConventionSettingGroupBox.TabStop = false;
-            this.ApplyConventionSettingGroupBox.Text = "Unity 코드 컨벤션 설정 파일 적용";
+            ApplyConventionSettingGroupBox.BackgroundImageLayout = ImageLayout.None;
+            ApplyConventionSettingGroupBox.Controls.Add(CheckConventionLabel);
+            ApplyConventionSettingGroupBox.Controls.Add(ApplyConventionSettingGuideLabel_1);
+            ApplyConventionSettingGroupBox.Controls.Add(ApplyConventionSettingGuideLabel_2);
+            ApplyConventionSettingGroupBox.Controls.Add(OpenUnityProjectDirButton);
+            ApplyConventionSettingGroupBox.Controls.Add(ApplyConventionButton);
+            ApplyConventionSettingGroupBox.Controls.Add(ApplyConventionSettingDescLabel_2);
+            ApplyConventionSettingGroupBox.Controls.Add(ApplyConventionSettingDescLabel_1);
+            ApplyConventionSettingGroupBox.Controls.Add(UnityProjectPathLabel);
+            ApplyConventionSettingGroupBox.Controls.Add(UnityProjectDirPathTextButton);
+            ApplyConventionSettingGroupBox.Location = new Point(28, 490);
+            ApplyConventionSettingGroupBox.Margin = new Padding(3, 4, 3, 4);
+            ApplyConventionSettingGroupBox.Name = "ApplyConventionSettingGroupBox";
+            ApplyConventionSettingGroupBox.Padding = new Padding(3, 4, 3, 4);
+            ApplyConventionSettingGroupBox.Size = new Size(442, 207);
+            ApplyConventionSettingGroupBox.TabIndex = 15;
+            ApplyConventionSettingGroupBox.TabStop = false;
+            ApplyConventionSettingGroupBox.Text = "Unity 코드 컨벤션 설정 파일 적용";
             // 
             // CheckConventionLabel
             // 
-            this.CheckConventionLabel.AutoSize = true;
-            this.CheckConventionLabel.Location = new System.Drawing.Point(15, 170);
-            this.CheckConventionLabel.Name = "CheckConventionLabel";
-            this.CheckConventionLabel.Size = new System.Drawing.Size(145, 12);
-            this.CheckConventionLabel.TabIndex = 18;
-            this.CheckConventionLabel.TabStop = true;
-            this.CheckConventionLabel.Text = "코드 컨벤션 확인하러가기";
-            this.CheckConventionLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CheckConventionLabel_LinkClicked);
+            CheckConventionLabel.AutoSize = true;
+            CheckConventionLabel.Location = new Point(13, 174);
+            CheckConventionLabel.Name = "CheckConventionLabel";
+            CheckConventionLabel.Size = new Size(147, 15);
+            CheckConventionLabel.TabIndex = 18;
+            CheckConventionLabel.TabStop = true;
+            CheckConventionLabel.Text = "코드 컨벤션 확인하러가기";
+            CheckConventionLabel.LinkClicked += CheckConventionLabel_LinkClicked;
             // 
             // ApplyConventionSettingGuideLabel_1
             // 
-            this.ApplyConventionSettingGuideLabel_1.AutoSize = true;
-            this.ApplyConventionSettingGuideLabel_1.ForeColor = System.Drawing.Color.Teal;
-            this.ApplyConventionSettingGuideLabel_1.Location = new System.Drawing.Point(16, 147);
-            this.ApplyConventionSettingGuideLabel_1.Name = "ApplyConventionSettingGuideLabel_1";
-            this.ApplyConventionSettingGuideLabel_1.Size = new System.Drawing.Size(359, 12);
-            this.ApplyConventionSettingGuideLabel_1.TabIndex = 16;
-            this.ApplyConventionSettingGuideLabel_1.Text = "만들거나, 업데이트를 적용하고나서, 최초 1회만 적용하면 됩니다.";
+            ApplyConventionSettingGuideLabel_1.AutoSize = true;
+            ApplyConventionSettingGuideLabel_1.ForeColor = Color.Teal;
+            ApplyConventionSettingGuideLabel_1.Location = new Point(13, 150);
+            ApplyConventionSettingGuideLabel_1.Name = "ApplyConventionSettingGuideLabel_1";
+            ApplyConventionSettingGuideLabel_1.Size = new Size(359, 15);
+            ApplyConventionSettingGuideLabel_1.TabIndex = 16;
+            ApplyConventionSettingGuideLabel_1.Text = "만들거나, 업데이트를 적용하고나서, 최초 1회만 적용하면 됩니다.";
             // 
             // ApplyConventionSettingGuideLabel_2
             // 
-            this.ApplyConventionSettingGuideLabel_2.AutoSize = true;
-            this.ApplyConventionSettingGuideLabel_2.ForeColor = System.Drawing.Color.Teal;
-            this.ApplyConventionSettingGuideLabel_2.Location = new System.Drawing.Point(16, 127);
-            this.ApplyConventionSettingGuideLabel_2.Name = "ApplyConventionSettingGuideLabel_2";
-            this.ApplyConventionSettingGuideLabel_2.Size = new System.Drawing.Size(398, 12);
-            this.ApplyConventionSettingGuideLabel_2.TabIndex = 15;
-            this.ApplyConventionSettingGuideLabel_2.Text = "프로젝트의 sln 파일이 있는 위치를 설정하시면 됩니다. 신규 프로젝트를 ";
+            ApplyConventionSettingGuideLabel_2.AutoSize = true;
+            ApplyConventionSettingGuideLabel_2.ForeColor = Color.Teal;
+            ApplyConventionSettingGuideLabel_2.Location = new Point(13, 130);
+            ApplyConventionSettingGuideLabel_2.Name = "ApplyConventionSettingGuideLabel_2";
+            ApplyConventionSettingGuideLabel_2.Size = new Size(397, 15);
+            ApplyConventionSettingGuideLabel_2.TabIndex = 15;
+            ApplyConventionSettingGuideLabel_2.Text = "프로젝트의 sln 파일이 있는 위치를 설정하시면 됩니다. 신규 프로젝트를 ";
             // 
             // ApplyConventionSettingDescLabel_2
             // 
-            this.ApplyConventionSettingDescLabel_2.AutoSize = true;
-            this.ApplyConventionSettingDescLabel_2.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ApplyConventionSettingDescLabel_2.ForeColor = System.Drawing.Color.Gray;
-            this.ApplyConventionSettingDescLabel_2.Location = new System.Drawing.Point(13, 41);
-            this.ApplyConventionSettingDescLabel_2.Name = "ApplyConventionSettingDescLabel_2";
-            this.ApplyConventionSettingDescLabel_2.Size = new System.Drawing.Size(216, 11);
-            this.ApplyConventionSettingDescLabel_2.TabIndex = 12;
-            this.ApplyConventionSettingDescLabel_2.Text = "(에디터 버전에 상관없이 프로젝트에 적용)";
+            ApplyConventionSettingDescLabel_2.AutoSize = true;
+            ApplyConventionSettingDescLabel_2.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ApplyConventionSettingDescLabel_2.ForeColor = Color.Gray;
+            ApplyConventionSettingDescLabel_2.Location = new Point(13, 44);
+            ApplyConventionSettingDescLabel_2.Name = "ApplyConventionSettingDescLabel_2";
+            ApplyConventionSettingDescLabel_2.Size = new Size(216, 11);
+            ApplyConventionSettingDescLabel_2.TabIndex = 12;
+            ApplyConventionSettingDescLabel_2.Text = "(에디터 버전에 상관없이 프로젝트에 적용)";
             // 
             // ApplyConventionSettingDescLabel_1
             // 
-            this.ApplyConventionSettingDescLabel_1.AutoSize = true;
-            this.ApplyConventionSettingDescLabel_1.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ApplyConventionSettingDescLabel_1.ForeColor = System.Drawing.Color.Gray;
-            this.ApplyConventionSettingDescLabel_1.Location = new System.Drawing.Point(13, 22);
-            this.ApplyConventionSettingDescLabel_1.Name = "ApplyConventionSettingDescLabel_1";
-            this.ApplyConventionSettingDescLabel_1.Size = new System.Drawing.Size(321, 11);
-            this.ApplyConventionSettingDescLabel_1.TabIndex = 11;
-            this.ApplyConventionSettingDescLabel_1.Text = "코드 컨벤션 규칙을 VS 포멧터에 적용되도록 하는 기능입니다. ";
+            ApplyConventionSettingDescLabel_1.AutoSize = true;
+            ApplyConventionSettingDescLabel_1.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ApplyConventionSettingDescLabel_1.ForeColor = Color.Gray;
+            ApplyConventionSettingDescLabel_1.Location = new Point(13, 28);
+            ApplyConventionSettingDescLabel_1.Name = "ApplyConventionSettingDescLabel_1";
+            ApplyConventionSettingDescLabel_1.Size = new Size(321, 11);
+            ApplyConventionSettingDescLabel_1.TabIndex = 11;
+            ApplyConventionSettingDescLabel_1.Text = "코드 컨벤션 규칙을 VS 포멧터에 적용되도록 하는 기능입니다. ";
             // 
             // UnityProjectPathLabel
             // 
-            this.UnityProjectPathLabel.AutoSize = true;
-            this.UnityProjectPathLabel.Location = new System.Drawing.Point(13, 65);
-            this.UnityProjectPathLabel.Name = "UnityProjectPathLabel";
-            this.UnityProjectPathLabel.Size = new System.Drawing.Size(193, 12);
-            this.UnityProjectPathLabel.TabIndex = 10;
-            this.UnityProjectPathLabel.Text = "컨벤션 적용할 Unity 프로젝트 경로";
+            UnityProjectPathLabel.AutoSize = true;
+            UnityProjectPathLabel.Location = new Point(13, 67);
+            UnityProjectPathLabel.Name = "UnityProjectPathLabel";
+            UnityProjectPathLabel.Size = new Size(195, 15);
+            UnityProjectPathLabel.TabIndex = 10;
+            UnityProjectPathLabel.Text = "컨벤션 적용할 Unity 프로젝트 경로";
             // 
             // UnityProjectDirPathTextButton
             // 
-            this.UnityProjectDirPathTextButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UnityProjectDirPathTextButton.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UnityProjectDirPathTextButton.Location = new System.Drawing.Point(212, 59);
-            this.UnityProjectDirPathTextButton.Margin = new System.Windows.Forms.Padding(0);
-            this.UnityProjectDirPathTextButton.Name = "UnityProjectDirPathTextButton";
-            this.UnityProjectDirPathTextButton.ReadOnly = true;
-            this.UnityProjectDirPathTextButton.Size = new System.Drawing.Size(132, 20);
-            this.UnityProjectDirPathTextButton.TabIndex = 5;
+            UnityProjectDirPathTextButton.BorderStyle = BorderStyle.FixedSingle;
+            UnityProjectDirPathTextButton.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            UnityProjectDirPathTextButton.Location = new Point(212, 64);
+            UnityProjectDirPathTextButton.Margin = new Padding(0);
+            UnityProjectDirPathTextButton.Name = "UnityProjectDirPathTextButton";
+            UnityProjectDirPathTextButton.ReadOnly = true;
+            UnityProjectDirPathTextButton.Size = new Size(132, 20);
+            UnityProjectDirPathTextButton.TabIndex = 5;
             // 
             // VersionLabel
             // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.VersionLabel.ForeColor = System.Drawing.Color.Teal;
-            this.VersionLabel.Location = new System.Drawing.Point(134, 62);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(104, 13);
-            this.VersionLabel.TabIndex = 16;
-            this.VersionLabel.Text = "Version X.X.X";
+            VersionLabel.AutoSize = true;
+            VersionLabel.Font = new Font("굴림", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            VersionLabel.ForeColor = Color.Teal;
+            VersionLabel.Location = new Point(134, 68);
+            VersionLabel.Name = "VersionLabel";
+            VersionLabel.Size = new Size(104, 13);
+            VersionLabel.TabIndex = 16;
+            VersionLabel.Text = "Version X.X.X";
             // 
             // SnippetInstallGroupBox
             // 
-            this.SnippetInstallGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SnippetInstallGroupBox.Controls.Add(this.SnippetGuideLinkLabel);
-            this.SnippetInstallGroupBox.Controls.Add(this.SnippetWikiLinkLabel);
-            this.SnippetInstallGroupBox.Controls.Add(OpenSnippetSavePathButton);
-            this.SnippetInstallGroupBox.Controls.Add(UpdateSnippetButton);
-            this.SnippetInstallGroupBox.Controls.Add(this.SnippetInstallDescLabel_1);
-            this.SnippetInstallGroupBox.Controls.Add(this.SnippetSavePathLabel);
-            this.SnippetInstallGroupBox.Controls.Add(this.SnippetSavePathTextBox);
-            this.SnippetInstallGroupBox.Location = new System.Drawing.Point(29, 729);
-            this.SnippetInstallGroupBox.Name = "SnippetInstallGroupBox";
-            this.SnippetInstallGroupBox.Size = new System.Drawing.Size(442, 136);
-            this.SnippetInstallGroupBox.TabIndex = 18;
-            this.SnippetInstallGroupBox.TabStop = false;
-            this.SnippetInstallGroupBox.Text = "C# 용 코드 스니펫 파일 다운로드 또는 업데이트";
+            SnippetInstallGroupBox.BackgroundImageLayout = ImageLayout.None;
+            SnippetInstallGroupBox.Controls.Add(SnippetGuideLinkLabel);
+            SnippetInstallGroupBox.Controls.Add(SnippetWikiLinkLabel);
+            SnippetInstallGroupBox.Controls.Add(OpenSnippetSavePathButton);
+            SnippetInstallGroupBox.Controls.Add(UpdateSnippetButton);
+            SnippetInstallGroupBox.Controls.Add(SnippetInstallDescLabel_1);
+            SnippetInstallGroupBox.Controls.Add(SnippetSavePathLabel);
+            SnippetInstallGroupBox.Controls.Add(SnippetSavePathTextBox);
+            SnippetInstallGroupBox.Location = new Point(28, 721);
+            SnippetInstallGroupBox.Margin = new Padding(3, 4, 3, 4);
+            SnippetInstallGroupBox.Name = "SnippetInstallGroupBox";
+            SnippetInstallGroupBox.Padding = new Padding(3, 4, 3, 4);
+            SnippetInstallGroupBox.Size = new Size(442, 143);
+            SnippetInstallGroupBox.TabIndex = 18;
+            SnippetInstallGroupBox.TabStop = false;
+            SnippetInstallGroupBox.Text = "C# 용 코드 스니펫 파일 다운로드 또는 업데이트";
             // 
             // SnippetGuideLinkLabel
             // 
-            this.SnippetGuideLinkLabel.AutoSize = true;
-            this.SnippetGuideLinkLabel.Location = new System.Drawing.Point(133, 108);
-            this.SnippetGuideLinkLabel.Name = "SnippetGuideLinkLabel";
-            this.SnippetGuideLinkLabel.Size = new System.Drawing.Size(125, 12);
-            this.SnippetGuideLinkLabel.TabIndex = 16;
-            this.SnippetGuideLinkLabel.TabStop = true;
-            this.SnippetGuideLinkLabel.Text = "설치 후 사용하는 방법";
-            this.SnippetGuideLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SnippetGuideLinkLabel_LinkClicked);
+            SnippetGuideLinkLabel.AutoSize = true;
+            SnippetGuideLinkLabel.Location = new Point(133, 113);
+            SnippetGuideLinkLabel.Name = "SnippetGuideLinkLabel";
+            SnippetGuideLinkLabel.Size = new Size(127, 15);
+            SnippetGuideLinkLabel.TabIndex = 16;
+            SnippetGuideLinkLabel.TabStop = true;
+            SnippetGuideLinkLabel.Text = "설치 후 사용하는 방법";
+            SnippetGuideLinkLabel.LinkClicked += SnippetGuideLinkLabel_LinkClicked;
             // 
             // SnippetWikiLinkLabel
             // 
-            this.SnippetWikiLinkLabel.AutoSize = true;
-            this.SnippetWikiLinkLabel.Location = new System.Drawing.Point(12, 108);
-            this.SnippetWikiLinkLabel.Name = "SnippetWikiLinkLabel";
-            this.SnippetWikiLinkLabel.Size = new System.Drawing.Size(99, 12);
-            this.SnippetWikiLinkLabel.TabIndex = 15;
-            this.SnippetWikiLinkLabel.TabStop = true;
-            this.SnippetWikiLinkLabel.Text = "코드 스니펫이란?";
-            this.SnippetWikiLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SnippetWikiLinkLabel_LinkClicked);
+            SnippetWikiLinkLabel.AutoSize = true;
+            SnippetWikiLinkLabel.Location = new Point(12, 113);
+            SnippetWikiLinkLabel.Name = "SnippetWikiLinkLabel";
+            SnippetWikiLinkLabel.Size = new Size(101, 15);
+            SnippetWikiLinkLabel.TabIndex = 15;
+            SnippetWikiLinkLabel.TabStop = true;
+            SnippetWikiLinkLabel.Text = "코드 스니펫이란?";
+            SnippetWikiLinkLabel.LinkClicked += SnippetWikiLinkLabel_LinkClicked;
             // 
             // SnippetInstallDescLabel_1
             // 
-            this.SnippetInstallDescLabel_1.AutoSize = true;
-            this.SnippetInstallDescLabel_1.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SnippetInstallDescLabel_1.ForeColor = System.Drawing.Color.Gray;
-            this.SnippetInstallDescLabel_1.Location = new System.Drawing.Point(13, 22);
-            this.SnippetInstallDescLabel_1.Name = "SnippetInstallDescLabel_1";
-            this.SnippetInstallDescLabel_1.Size = new System.Drawing.Size(259, 11);
-            this.SnippetInstallDescLabel_1.TabIndex = 11;
-            this.SnippetInstallDescLabel_1.Text = "자주 사용하는 코드 스니펫을 관리하는 기능입니다.";
+            SnippetInstallDescLabel_1.AutoSize = true;
+            SnippetInstallDescLabel_1.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            SnippetInstallDescLabel_1.ForeColor = Color.Gray;
+            SnippetInstallDescLabel_1.Location = new Point(13, 26);
+            SnippetInstallDescLabel_1.Name = "SnippetInstallDescLabel_1";
+            SnippetInstallDescLabel_1.Size = new Size(259, 11);
+            SnippetInstallDescLabel_1.TabIndex = 11;
+            SnippetInstallDescLabel_1.Text = "자주 사용하는 코드 스니펫을 관리하는 기능입니다.";
             // 
             // SnippetSavePathLabel
             // 
-            this.SnippetSavePathLabel.AutoSize = true;
-            this.SnippetSavePathLabel.Location = new System.Drawing.Point(13, 48);
-            this.SnippetSavePathLabel.Name = "SnippetSavePathLabel";
-            this.SnippetSavePathLabel.Size = new System.Drawing.Size(121, 12);
-            this.SnippetSavePathLabel.TabIndex = 10;
-            this.SnippetSavePathLabel.Text = "스니펫을 저장할 경로";
+            SnippetSavePathLabel.AutoSize = true;
+            SnippetSavePathLabel.Location = new Point(13, 51);
+            SnippetSavePathLabel.Name = "SnippetSavePathLabel";
+            SnippetSavePathLabel.Size = new Size(123, 15);
+            SnippetSavePathLabel.TabIndex = 10;
+            SnippetSavePathLabel.Text = "스니펫을 저장할 경로";
             // 
             // SnippetSavePathTextBox
             // 
-            this.SnippetSavePathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SnippetSavePathTextBox.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SnippetSavePathTextBox.Location = new System.Drawing.Point(145, 43);
-            this.SnippetSavePathTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.SnippetSavePathTextBox.Name = "SnippetSavePathTextBox";
-            this.SnippetSavePathTextBox.ReadOnly = true;
-            this.SnippetSavePathTextBox.Size = new System.Drawing.Size(199, 20);
-            this.SnippetSavePathTextBox.TabIndex = 5;
+            SnippetSavePathTextBox.BorderStyle = BorderStyle.FixedSingle;
+            SnippetSavePathTextBox.Font = new Font("굴림", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            SnippetSavePathTextBox.Location = new Point(145, 48);
+            SnippetSavePathTextBox.Margin = new Padding(0);
+            SnippetSavePathTextBox.Name = "SnippetSavePathTextBox";
+            SnippetSavePathTextBox.ReadOnly = true;
+            SnippetSavePathTextBox.Size = new Size(199, 20);
+            SnippetSavePathTextBox.TabIndex = 5;
             // 
             // HR_2
             // 
-            this.HR_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HR_2.Location = new System.Drawing.Point(29, 312);
-            this.HR_2.Name = "HR_2";
-            this.HR_2.Size = new System.Drawing.Size(442, 4);
-            this.HR_2.TabIndex = 8;
+            HR_2.BorderStyle = BorderStyle.Fixed3D;
+            HR_2.Location = new Point(28, 288);
+            HR_2.Margin = new Padding(3, 4, 3, 4);
+            HR_2.Name = "HR_2";
+            HR_2.Size = new Size(442, 4);
+            HR_2.TabIndex = 8;
             // 
             // HR_3
             // 
-            this.HR_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HR_3.Location = new System.Drawing.Point(29, 493);
-            this.HR_3.Name = "HR_3";
-            this.HR_3.Size = new System.Drawing.Size(442, 4);
-            this.HR_3.TabIndex = 10;
+            HR_3.BorderStyle = BorderStyle.Fixed3D;
+            HR_3.Location = new Point(28, 476);
+            HR_3.Margin = new Padding(3, 4, 3, 4);
+            HR_3.Name = "HR_3";
+            HR_3.Size = new Size(442, 4);
+            HR_3.TabIndex = 10;
             // 
             // HR_4
             // 
-            this.HR_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HR_4.Location = new System.Drawing.Point(29, 713);
-            this.HR_4.Name = "HR_4";
-            this.HR_4.Size = new System.Drawing.Size(442, 4);
-            this.HR_4.TabIndex = 17;
+            HR_4.BorderStyle = BorderStyle.Fixed3D;
+            HR_4.Location = new Point(28, 707);
+            HR_4.Margin = new Padding(3, 4, 3, 4);
+            HR_4.Name = "HR_4";
+            HR_4.Size = new Size(442, 4);
+            HR_4.TabIndex = 17;
             // 
-            // label1
+            // TeamNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("D2Coding", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(135, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 14);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Convention Rule : Team Name";
-            this.label1.Visible = false;
+            TeamNameLabel.AutoSize = true;
+            TeamNameLabel.Enabled = false;
+            TeamNameLabel.Font = new Font("D2Coding", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            TeamNameLabel.ForeColor = SystemColors.MenuHighlight;
+            TeamNameLabel.Location = new Point(135, 88);
+            TeamNameLabel.Name = "TeamNameLabel";
+            TeamNameLabel.Size = new Size(196, 15);
+            TeamNameLabel.TabIndex = 20;
+            TeamNameLabel.Text = "Convention Rule : Team Name";
+            TeamNameLabel.Visible = false;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileMenuButton,
-            this.ToolMenuButton,
-            this.HelpMenuButton});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(496, 24);
-            this.menuStrip1.TabIndex = 21;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new ToolStripItem[] { FileMenuButton, ToolMenuButton, HelpMenuButton });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(496, 24);
+            menuStrip1.TabIndex = 21;
+            menuStrip1.Text = "menuStrip1";
             // 
             // FileMenuButton
             // 
-            this.FileMenuButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ResourceDirOpenButton});
-            this.FileMenuButton.Name = "FileMenuButton";
-            this.FileMenuButton.Size = new System.Drawing.Size(61, 20);
-            this.FileMenuButton.Text = "파일 (&F)";
+            FileMenuButton.DropDownItems.AddRange(new ToolStripItem[] { ResourceDirOpenButton });
+            FileMenuButton.Name = "FileMenuButton";
+            FileMenuButton.Size = new Size(61, 20);
+            FileMenuButton.Text = "파일 (&F)";
             // 
             // ResourceDirOpenButton
             // 
-            this.ResourceDirOpenButton.Name = "ResourceDirOpenButton";
-            this.ResourceDirOpenButton.Size = new System.Drawing.Size(215, 22);
-            this.ResourceDirOpenButton.Text = "리소스 파일 위치 열기 (&O)";
-            this.ResourceDirOpenButton.Click += new System.EventHandler(this.ResourceDirOpenButton_Click);
+            ResourceDirOpenButton.Name = "ResourceDirOpenButton";
+            ResourceDirOpenButton.Size = new Size(215, 22);
+            ResourceDirOpenButton.Text = "리소스 파일 위치 열기 (&O)";
+            ResourceDirOpenButton.Click += ResourceDirOpenButton_Click;
             // 
             // ToolMenuButton
             // 
-            this.ToolMenuButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CustomToolButton});
-            this.ToolMenuButton.Name = "ToolMenuButton";
-            this.ToolMenuButton.Size = new System.Drawing.Size(61, 20);
-            this.ToolMenuButton.Text = "도구 (&T)";
+            ToolMenuButton.DropDownItems.AddRange(new ToolStripItem[] { CustomToolButton });
+            ToolMenuButton.Name = "ToolMenuButton";
+            ToolMenuButton.Size = new Size(61, 20);
+            ToolMenuButton.Text = "도구 (&T)";
             // 
             // CustomToolButton
             // 
-            this.CustomToolButton.Name = "CustomToolButton";
-            this.CustomToolButton.Size = new System.Drawing.Size(180, 22);
-            this.CustomToolButton.Text = "커스텀 도구 (&C)";
-            this.CustomToolButton.Click += new System.EventHandler(this.CustomToolButton_Click);
+            CustomToolButton.Name = "CustomToolButton";
+            CustomToolButton.Size = new Size(180, 22);
+            CustomToolButton.Text = "커스텀 도구 (&C)";
+            CustomToolButton.Click += CustomToolButton_Click;
             // 
             // HelpMenuButton
             // 
-            this.HelpMenuButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OpenGithubButton,
-            this.OpenBlogButton});
-            this.HelpMenuButton.Name = "HelpMenuButton";
-            this.HelpMenuButton.Size = new System.Drawing.Size(76, 20);
-            this.HelpMenuButton.Text = "도움말 (&H)";
+            HelpMenuButton.DropDownItems.AddRange(new ToolStripItem[] { OpenGithubButton, OpenBlogButton });
+            HelpMenuButton.Name = "HelpMenuButton";
+            HelpMenuButton.Size = new Size(76, 20);
+            HelpMenuButton.Text = "도움말 (&H)";
             // 
             // OpenGithubButton
             // 
-            this.OpenGithubButton.Name = "OpenGithubButton";
-            this.OpenGithubButton.Size = new System.Drawing.Size(237, 22);
-            this.OpenGithubButton.Text = "Convention Wizard에 대해 (&C)";
-            this.OpenGithubButton.Click += new System.EventHandler(this.OpenGithubButton_Click);
+            OpenGithubButton.Name = "OpenGithubButton";
+            OpenGithubButton.Size = new Size(237, 22);
+            OpenGithubButton.Text = "Convention Wizard에 대해 (&C)";
+            OpenGithubButton.Click += OpenGithubButton_Click;
             // 
             // OpenBlogButton
             // 
-            this.OpenBlogButton.Name = "OpenBlogButton";
-            this.OpenBlogButton.Size = new System.Drawing.Size(237, 22);
-            this.OpenBlogButton.Text = "개발자 블로그 (&B)";
-            this.OpenBlogButton.Click += new System.EventHandler(this.OpenBlogButton_Click);
+            OpenBlogButton.Name = "OpenBlogButton";
+            OpenBlogButton.Size = new Size(237, 22);
+            OpenBlogButton.Text = "개발자 블로그 (&B)";
+            OpenBlogButton.Click += OpenBlogButton_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(496, 872);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.SnippetInstallGroupBox);
-            this.Controls.Add(this.VersionLabel);
-            this.Controls.Add(this.HR_4);
-            this.Controls.Add(this.ApplyConventionSettingGroupBox);
-            this.Controls.Add(this.HR_3);
-            this.Controls.Add(this.CodeBaseInstallGroup);
-            this.Controls.Add(this.HR_2);
-            this.Controls.Add(this.VsixInstallGroup);
-            this.Controls.Add(this.HR_1);
-            this.Controls.Add(this.TitleSubLabel);
-            this.Controls.Add(this.TitleCopyrightLabel);
-            this.Controls.Add(this.IconViewer);
-            this.Controls.Add(this.TitleLabel);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainForm";
-            this.Text = "Convention Wizard For Unity";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.IconViewer)).EndInit();
-            this.VsixInstallGroup.ResumeLayout(false);
-            this.CodeBaseInstallGroup.ResumeLayout(false);
-            this.CodeBaseInstallGroup.PerformLayout();
-            this.ApplyConventionSettingGroupBox.ResumeLayout(false);
-            this.ApplyConventionSettingGroupBox.PerformLayout();
-            this.SnippetInstallGroupBox.ResumeLayout(false);
-            this.SnippetInstallGroupBox.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Menu;
+            ClientSize = new Size(496, 875);
+            Controls.Add(TeamNameLabel);
+            Controls.Add(SnippetInstallGroupBox);
+            Controls.Add(VersionLabel);
+            Controls.Add(HR_4);
+            Controls.Add(ApplyConventionSettingGroupBox);
+            Controls.Add(HR_3);
+            Controls.Add(CodeBaseInstallGroup);
+            Controls.Add(HR_2);
+            Controls.Add(VsixInstallGroup);
+            Controls.Add(HR_1);
+            Controls.Add(TitleSubLabel);
+            Controls.Add(IconViewer);
+            Controls.Add(TitleLabel);
+            Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MainForm";
+            Text = "Convention Wizard For Unity";
+            Load += MainForm_Load;
+            ((System.ComponentModel.ISupportInitialize)IconViewer).EndInit();
+            VsixInstallGroup.ResumeLayout(false);
+            CodeBaseInstallGroup.ResumeLayout(false);
+            CodeBaseInstallGroup.PerformLayout();
+            ApplyConventionSettingGroupBox.ResumeLayout(false);
+            ApplyConventionSettingGroupBox.PerformLayout();
+            SnippetInstallGroupBox.ResumeLayout(false);
+            SnippetInstallGroupBox.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
         #endregion PRIVATE_METHOD
 
@@ -754,18 +745,18 @@ namespace ConventionWizardForUnity
         }
         #endregion PROTECTED_METHOD
 
-        private System.Windows.Forms.LinkLabel CheckConventionLabel;
-        private System.Windows.Forms.LinkLabel SnippetGuideLinkLabel;
-        private System.Windows.Forms.LinkLabel SnippetWikiLinkLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem FileMenuButton;
-        private System.Windows.Forms.ToolStripMenuItem ResourceDirOpenButton;
-        private System.Windows.Forms.ToolStripMenuItem ToolMenuButton;
-        private System.Windows.Forms.ToolStripMenuItem CustomToolButton;
-        private System.Windows.Forms.ToolStripMenuItem HelpMenuButton;
-        private System.Windows.Forms.ToolStripMenuItem OpenGithubButton;
-        private System.Windows.Forms.ToolStripMenuItem OpenBlogButton;
+        private LinkLabel CheckConventionLabel;
+        private LinkLabel SnippetGuideLinkLabel;
+        private LinkLabel SnippetWikiLinkLabel;
+        private Label TeamNameLabel;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem FileMenuButton;
+        private ToolStripMenuItem ResourceDirOpenButton;
+        private ToolStripMenuItem ToolMenuButton;
+        private ToolStripMenuItem CustomToolButton;
+        private ToolStripMenuItem HelpMenuButton;
+        private ToolStripMenuItem OpenGithubButton;
+        private ToolStripMenuItem OpenBlogButton;
     }
 }
 

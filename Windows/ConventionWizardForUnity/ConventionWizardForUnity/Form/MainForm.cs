@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
 using System.Text;
-using System.Windows.Forms;
+using ConventionWizardForUnity.Logic;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace ConventionWizardForUnity
@@ -14,7 +9,7 @@ namespace ConventionWizardForUnity
     ///  Convention Wizard For Unity
     ///  ------------------------------------------------------------------------------------------------------------------------
     ///  Convention Wizard For Unity의 로직 파트
-    ///  2024.04.25 @Andrew
+    ///  2024.04.25 @KimYC1223
     ///
     ///==========================================================================================================================
     public partial class MainForm : Form
@@ -22,9 +17,7 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         ///  PRIVATE 멤버 필드
         ///======================================================================================================================
-        private readonly string currentVersionString = "1.0.0";                 // 현재 Convention Wizard 4 Unity의 버전 string
-
-        private readonly Timer uiButtonTimer = new Timer();                     // 버튼 연속 클릭을 방지할 타이머
+        private readonly System.Windows.Forms.Timer uiButtonTimer;              // 버튼 연속 클릭을 방지할 타이머
 
         private string unityEditorRootPath = "C:\\Program Files\\Unity";        // Unity Hub가 설치된 기본 경로
         private string unityProjectPath = string.Empty;                         // 컨벤션 세팅을 적용할 프로젝트 경로
@@ -37,49 +30,15 @@ namespace ConventionWizardForUnity
         {
             InitializeComponent();
 
-            try 
-            {
-                var checker = new VersionChecker();
-
-                string newVersionString = checker.GetVersion();
-                Console.WriteLine($"latest version is {newVersionString}");
-                newVersionString = newVersionString.Trim();
-
-                var currentVersion = new Version(currentVersionString);
-                var newVersion = new Version(newVersionString);
-
-                // 현재 버전보다 새로운 버전이 나온 경우
-                if (newVersion > currentVersion)
-                {
-                    if (MessageBox.Show($"새로운 버전({newVersionString})이 나왔습니다.\r업데이트 하시겠습니까?\r\r" +
-                                       $"현재 버전 : {currentVersionString}",
-                                       "업데이트 가능", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        Process.Start("https://github.com/KimYC1223/ConventionWizardForUnity/releases/");
-                        Close();
-                    }
-                }
-                // 현재 버전이 최신 버전일 경우
-                else if (newVersion <= currentVersion)
-                {
-                    MessageBox.Show($"현재 버전({currentVersionString})은 최신 버전입니다.",
-                                    "업데이트 확인 완료", MessageBoxButtons.OK);
-                }
-            }
-            catch (Exception ex)
-            {
-                // 버전을 확인하는 과정에서 문제가 생긴 경우
-                Console.WriteLine(ex.ToString());
-                MessageBox.Show("업데이트 정보를 가져오는중 문제가 발생했습니다.\r" +
-                                "인터넷 연결 상태를 확인하세요.\r\r업데이트 없이 기존 버전으로 진행합니다.",
-                                "업데이트 확인 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            VersionLabel.Text = $"Version {currentVersionString}";
-            uiButtonTimer = new Timer
+            VersionLabel.Text = $"App v{ApplicationVersionManager.CurrentApplicationVersion} / " +
+                                $"Resource v{ResourceVersionManager.ResourceVersionState.CurrentVersion}";
+            uiButtonTimer = new System.Windows.Forms.Timer
             {
                 Interval = 1000
             };
+
+            TeamNameLabel.Text = (string.IsNullOrEmpty(ResourceVersionManager.LocalResourceURL.ConventionTeamName) == true) ?
+                            string.Empty : $"Convention Rule : {ResourceVersionManager.LocalResourceURL.ConventionTeamName}";
             uiButtonTimer.Tick += new EventHandler(VsixInstallButtonEnableTimer);
         }
 
@@ -180,7 +139,7 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         ///  CodeMaid VSIX를 설치하는 메서드
         ///======================================================================================================================
-        private void VsixInstallButtonEnableTimer(object sender, EventArgs e)
+        private void VsixInstallButtonEnableTimer(object? sender, EventArgs e)
         {
             InstallSonarLintButtonVS2019.Enabled = true;
             InstallCodeMaidButtonVS2019.Enabled = true;
@@ -196,15 +155,13 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         private void OpenUnityEditorDirButton_Click(object sender, EventArgs e)
         {
-            using (var unityEditorPathSelectDialog = new CommonOpenFileDialog())
+            using var unityEditorPathSelectDialog = new CommonOpenFileDialog();
+            unityEditorPathSelectDialog.IsFolderPicker = true;
+            unityEditorPathSelectDialog.InitialDirectory = "C:\\Program Files\\Unity";
+            if (unityEditorPathSelectDialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                unityEditorPathSelectDialog.IsFolderPicker = true;
-                unityEditorPathSelectDialog.InitialDirectory = "C:\\Program Files\\Unity";
-                if (unityEditorPathSelectDialog.ShowDialog() == CommonFileDialogResult.Ok)
-                {
-                    unityEditorRootPath = unityEditorPathSelectDialog.FileName;
-                    UnityEditorDirPathTextButton.Text = unityEditorRootPath;
-                }
+                unityEditorRootPath = unityEditorPathSelectDialog.FileName;
+                UnityEditorDirPathTextButton.Text = unityEditorRootPath;
             }
         }
 
@@ -224,7 +181,7 @@ namespace ConventionWizardForUnity
                 tempPath = tempPath.Replace('\\', Path.DirectorySeparatorChar);
 
                 string[] splitedPath = tempPath.Split(Path.DirectorySeparatorChar);
-                string selectedFileName = splitedPath[splitedPath.Length - 1];
+                string selectedFileName = splitedPath[^1];
                 if (selectedFileName == "Unity")
                 {
                     installedEditorRootPath = unityEditorRootPath;
@@ -317,7 +274,7 @@ namespace ConventionWizardForUnity
                 tempPath = tempPath.Replace('\\', Path.DirectorySeparatorChar);
 
                 string[] splitedPath = tempPath.Split(Path.DirectorySeparatorChar);
-                string selectedFileName = splitedPath[splitedPath.Length - 1];
+                string selectedFileName = splitedPath[^1];
                 if (selectedFileName == "Unity")
                 {
                     installedEditorRootPath = unityEditorRootPath;
@@ -397,14 +354,12 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         private void OpenUnityProjectDirButton_Click(object sender, EventArgs e)
         {
-            using (var unityProjectPathSelectDialog = new CommonOpenFileDialog())
+            using var unityProjectPathSelectDialog = new CommonOpenFileDialog();
+            unityProjectPathSelectDialog.IsFolderPicker = true;
+            if (unityProjectPathSelectDialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                unityProjectPathSelectDialog.IsFolderPicker = true;
-                if (unityProjectPathSelectDialog.ShowDialog() == CommonFileDialogResult.Ok)
-                {
-                    unityProjectPath = unityProjectPathSelectDialog.FileName;
-                    UnityProjectDirPathTextButton.Text = unityProjectPath;
-                }
+                unityProjectPath = unityProjectPathSelectDialog.FileName;
+                UnityProjectDirPathTextButton.Text = unityProjectPath;
             }
         }
 
@@ -438,7 +393,7 @@ namespace ConventionWizardForUnity
                 return;
             }
             string[] splited = unityProjectPath.Split(Path.DirectorySeparatorChar);
-            string projectName = splited[splited.Length - 1];
+            string projectName = splited[^1];
 
             //===================================================================================================================
             //  [컨벤션 설정] 복사할 파일이 있는지 확인
@@ -457,7 +412,7 @@ namespace ConventionWizardForUnity
                 foreach (string file in configFiles)
                 {
                     splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     createFileName.Add(fileName);
                 }
             }
@@ -470,7 +425,7 @@ namespace ConventionWizardForUnity
                 foreach (string file in configFiles)
                 {
                     splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     string destinationSettingFilePath = Path.Combine(unityProjectPath, fileName);
                     if (File.Exists(destinationSettingFilePath) == true)
                     {
@@ -509,7 +464,7 @@ namespace ConventionWizardForUnity
                 foreach (string file in githubPRTemplateFiles)
                 {
                     splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     createFileName.Add(fileName);
                 }
             }
@@ -528,7 +483,7 @@ namespace ConventionWizardForUnity
                     }
 
                     splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     string destinationSettingFilePath = Path.Combine(destinationDirPath, fileName);
                     if (File.Exists(destinationSettingFilePath) == true)
                     {
@@ -567,7 +522,7 @@ namespace ConventionWizardForUnity
                 foreach (string file in azurePRTemplateFiles)
                 {
                     splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     createFileName.Add(fileName);
                 }
             }
@@ -586,7 +541,7 @@ namespace ConventionWizardForUnity
                     }
 
                     splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     string destinationSettingFilePath = Path.Combine(destinationDirPath, fileName);
                     if (File.Exists(destinationSettingFilePath) == true)
                     {
@@ -620,14 +575,12 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         private void OpenSnippetSavePathButton_Click(object sender, EventArgs e)
         {
-            using (var snippetSavePathSelectDialog = new CommonOpenFileDialog())
+            using var snippetSavePathSelectDialog = new CommonOpenFileDialog();
+            snippetSavePathSelectDialog.IsFolderPicker = true;
+            if (snippetSavePathSelectDialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                snippetSavePathSelectDialog.IsFolderPicker = true;
-                if (snippetSavePathSelectDialog.ShowDialog() == CommonFileDialogResult.Ok)
-                {
-                    snippetSavePath = snippetSavePathSelectDialog.FileName;
-                    SnippetSavePathTextBox.Text = snippetSavePath;
-                }
+                snippetSavePath = snippetSavePathSelectDialog.FileName;
+                SnippetSavePathTextBox.Text = snippetSavePath;
             }
         }
 
@@ -659,13 +612,13 @@ namespace ConventionWizardForUnity
                 try
                 {
                     string[] splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
                     deleteFileName.Add(fileName);
                     File.Delete(file);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
+                    Debug.WriteLine(ex);
                     MessageBox.Show($"{ex.Message}\r\r기존 스니펫 파일을 정리하는 중 문제가 발생했습니다.\r" +
                                     $"관리자 권한으로도 실행해 보세요.",
                                     "스니펫 적용 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -692,7 +645,7 @@ namespace ConventionWizardForUnity
                 foreach (string file in snippetFiles)
                 {
                     string[] splited = file.Split(Path.DirectorySeparatorChar);
-                    string fileName = splited[splited.Length - 1];
+                    string fileName = splited[^1];
 
                     if (deleteFileName.Contains(fileName) == true)
                     {
@@ -735,7 +688,11 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         private void SnippetWikiLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://learn.microsoft.com/ko-kr/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2022");
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://learn.microsoft.com/ko-kr/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2022",
+                UseShellExecute = true
+            });
         }
 
         ///======================================================================================================================
@@ -743,7 +700,11 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         private void SnippetGuideLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/KimYC1223/ConventionWizardForUnity/wiki");
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/KimYC1223/ConventionWizardForUnity/wiki",
+                UseShellExecute = true
+            });
         }
 
         ///======================================================================================================================
@@ -751,23 +712,52 @@ namespace ConventionWizardForUnity
         ///======================================================================================================================
         private void CheckConventionLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/KimYC1223/ConventionWizardForUnity/wiki/Convention-Wizard-For-Unity-%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98");
-        }
-
-        ///======================================================================================================================
-        ///  깃허브 레포를 여는 메서드
-        ///======================================================================================================================
-        private void GithubReleasePageLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://github.com/KimYC1223/ConventionWizardForUnity/releases/");
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/KimYC1223/ConventionWizardForUnity/wiki" +
+                          "/Convention-Wizard-For-Unity-%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98",
+                UseShellExecute = true
+            });
         }
 
         ///======================================================================================================================
         ///  개발자 블로그를 여는 메서드
         ///======================================================================================================================
-        private void BlogLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void OpenBlogButton_Click(object sender, EventArgs e)
         {
-            Process.Start("https://kimyc1223.github.io/");
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://kimyc1223.github.io/",
+                UseShellExecute = true
+            });
+        }
+
+        ///======================================================================================================================
+        ///  개발자 블로그를 여는 메서드
+        ///======================================================================================================================
+        private void OpenGithubButton_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/KimYC1223/ConventionWizardForUnity/releases/",
+                UseShellExecute = true
+            });
+        }
+
+        ///======================================================================================================================
+        ///  Convention Wizard 컨벤션 툴을 여는 메서드
+        ///======================================================================================================================
+        private void CustomToolButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        ///======================================================================================================================
+        ///  Convention Wizard For Unity의 Resources가 설치된 디렉토리 열기
+        ///======================================================================================================================
+        private void ResourceDirOpenButton_Click(object sender, EventArgs e)
+        {
+            Process.Start(Path.Combine(Application.StartupPath, "Resources").Replace('/', Path.DirectorySeparatorChar));
         }
 
         ///======================================================================================================================
@@ -822,10 +812,10 @@ namespace ConventionWizardForUnity
 
             for (int i = 0; i < sbList.Count; i++)
             {
-                resultSB.Append(sbList[i].ToString());
+                resultSB.Append(sbList[i]);
                 if (i < sbList.Count - 1)
                 {
-                    resultSB.Append("\r");
+                    resultSB.Append('\r');
                 }
             }
 
@@ -835,26 +825,6 @@ namespace ConventionWizardForUnity
             }
 
             return resultString;
-        }
-
-        private void OpenBlogButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OpenGithubButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CustomToolButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ResourceDirOpenButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

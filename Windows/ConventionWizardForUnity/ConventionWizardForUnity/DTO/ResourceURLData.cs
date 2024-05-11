@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace ConventionWizardForUnity.DTO
 {
     ///==========================================================================================================================
@@ -10,7 +7,7 @@ namespace ConventionWizardForUnity.DTO
     ///  <summary>
     ///  프로그램에서 사용하는 Resource URL Data에 관한 DTO
     ///  </summary>
-    ///  
+    ///
     ///==========================================================================================================================
     [Serializable]
     public class ResourceURLData
@@ -43,6 +40,6 @@ namespace ConventionWizardForUnity.DTO
         /// <summary>
         /// Convention Wizard For Unity에서 사용하는 리소스들의 URL
         /// </summary>
-        public Dictionary<string, string> ResourceURLDictionary;
+        public Dictionary<string, string> ResourceURLDictionary = new Dictionary<string, string>();
     }
 }
